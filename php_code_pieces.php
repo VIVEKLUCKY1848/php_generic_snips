@@ -73,3 +73,9 @@ global $debugMode;
 }
 ## A nice debugging function & it's usage finish
 
+## Workaround for "Nesting level too deep..." error for long objects
+ob_start();
+var_dump($obj);
+$dataDump = ob_get_clean();
+echo $dataDump;exit
+
