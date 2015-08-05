@@ -7,3 +7,7 @@ echo "<pre/>";print_r($variable);die;
 echo "<pre/>";var_dump($variable);die;
 ### or ###
 echo "<pre/>";var_dump($variable);exit;
+### or ###
+var_export($variable);die;
+### or ###
+var_export($variable);exit;
