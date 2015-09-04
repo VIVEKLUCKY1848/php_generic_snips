@@ -79,7 +79,7 @@ var_dump($obj);
 $dataDump = ob_get_clean();
 echo $dataDump;exit
 
-## Latest States Array
+## Latest Indian States PHPArray
 $statesArr = array(
 	1 => 'Andaman and Nicobar Island',
 	2 => 'Andhra Pradesh',
