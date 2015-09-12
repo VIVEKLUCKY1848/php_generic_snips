@@ -371,3 +371,14 @@ $countriesArr = array(
 	'ZAMBIA' => 'ZM',
 	'ZIMBABWE' => 'ZW',
 );
+
+## Check if a value exists in a multi-dimensional array start
+function in_array_r($needle, $haystack, $strict = false) {
+	foreach ($haystack as $item) {
+		if (($strict ? $item === $needle : $item == $needle) || (is_array($item) && in_array_r($needle, $item, $strict))) {
+			return true;
+		}
+	}
+	return false;
+}
+## Check if a value exists in a multi-dimensional array finish
