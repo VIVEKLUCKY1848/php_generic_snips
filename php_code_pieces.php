@@ -382,3 +382,8 @@ function in_array_r($needle, $haystack, $strict = false) {
 	return false;
 }
 ## Check if a value exists in a multi-dimensional array finish
+
+## PHP Extract Link URL & Label from HTML Content start
+preg_match_all("/\<a.*href=\"(.*?)\".*?\>(.*)\<\/a\>+/", $anyHtmlContent, $linkData, PREG_SET_ORDER);
+var_dump($linkData);
+## PHP Extract Link URL & Label from HTML Content finish
