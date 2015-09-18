@@ -391,3 +391,8 @@ function in_array_r($needle, $haystack, $strict = false) {
 preg_match_all("/\<a.*href=\"(.*?)\".*?\>(.*)\<\/a\>+/", $anyHtmlContent, $linkData, PREG_SET_ORDER);
 var_dump($linkData);
 ## PHP Extract Link URL & Label from HTML Content finish
+
+## PHP Extract content inside <body> tags start
+preg_match("/<body[^>]*>(.*?)<\/body>/is", $html, $matches);
+$content = $matches[1];
+## PHP Extract content inside <body> tags end
