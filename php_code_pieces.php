@@ -400,3 +400,13 @@ $content = $matches[1];
 ## Remove duplicate elements from Multi-dimensional Arrays start
 $uniqArray = array_map("unserialize", array_unique(array_map("serialize", $nonUniqArray)));
 ## Remove duplicate elements from Multi-dimensional Arrays end
+
+## Check if the given array is multidimensional or not start
+function is_multi($a) {
+    $rv = array_filter($a,'is_array');
+    if(count($rv)>0) return true;
+    return false;
+}
+## example
+	is_multi($stateArr);
+## Check if the given array is multidimensional or not end
