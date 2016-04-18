@@ -396,3 +396,7 @@ var_dump($linkData);
 preg_match("/<body[^>]*>(.*?)<\/body>/is", $html, $matches);
 $content = $matches[1];
 ## PHP Extract content inside <body> tags end
+
+## Remove duplicate elements from Multi-dimensional Arrays start
+$stateArr = array_map("unserialize", array_unique(array_map("serialize", $stateArr)));
+## Remove duplicate elements from Multi-dimensional Arrays end
