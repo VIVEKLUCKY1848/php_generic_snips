@@ -398,5 +398,5 @@ $content = $matches[1];
 ## PHP Extract content inside <body> tags end
 
 ## Remove duplicate elements from Multi-dimensional Arrays start
-$stateArr = array_map("unserialize", array_unique(array_map("serialize", $stateArr)));
+$uniqArray = array_map("unserialize", array_unique(array_map("serialize", $nonUniqArray)));
 ## Remove duplicate elements from Multi-dimensional Arrays end
